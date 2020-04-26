@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+
+message Request {
+    string userID = 1;
+}
+
+message Response {
+    string driverID = 2;
+}
+
+service AggregatorService {
+    rpc PickDriverAndAssign (Request) returns (Response) {
+    }
+}
